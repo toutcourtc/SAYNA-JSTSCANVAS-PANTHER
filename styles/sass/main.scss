@@ -1,0 +1,573 @@
+/*****Importation des polices de carcatères****/
+@font-face{
+    font-family : "panthera";
+    src:url("fonts/panthera/panthera.otf");
+}
+@font-face{
+    font-family : "beyno";
+    src:url('fonts/beyno/BEYNO.otf');
+}
+
+@font-face{
+    font-family : "wakanda-fanther";
+    src:url("fonts/wakanda-fanther/WakandaFanther-JRpp7.ttf");
+}
+@font-face{
+    font-family : "cantarell";
+    src: url('fonts/Cantarell/Cantarell-Regular.ttf');
+}
+
+#body{
+    // background-image : url("../img/logos/arrière_plan.png");
+    background : radial-gradient(126.67% 350.28% at -21.35% 0%, #11213F 0%, #0B0B0B 39.1%, rgba(2,23,64,0.837641) 94.57%, rgba(2,23,64,0) 100%);
+    color : white;
+    a{
+        color : white;
+        text-decoration : none;
+        &:hover{
+            text-decoration : underline;
+        }   
+    }
+}
+
+/**********Règles générales*********/
+h1#h1{
+    font-family : "panthera";
+    margin-top : 120px;
+    font-size : 68px;
+}
+h2.h2{
+    font-family : "beyno";
+    font-size : 32px;
+}
+h3.h3{
+    font-family : "wakanda-fanther";
+}
+#body #main p{
+    font-family : "cantarell";
+    font-size : 16px;
+    text-align : justify;
+}
+section{
+    padding : 10px;
+}
+.wakanda-fanther{
+    font-family : "wakanda-fanther";
+}
+/* Animation des traits violets à l'entrée */
+@keyframes entree_icons{
+    from{
+        transform : translateY(-400px);
+    }
+    to{
+        transform : translateY(0px);
+    }
+}
+#icons-container{
+    // animation : entree_icons 5s;
+}
+*{
+    // animation : entree 3s;
+    // border : 1px solid black;
+}
+
+/********Le header********/
+#header{
+    font-family : "beyno";
+    margin : 20px 40px;
+    display : flex;
+    flex-wrap : wrap;
+    justify-content : space-between;
+    @media screen and (max-width:576px){
+        .logos, #menu, ul, li{
+            margin : auto !important;
+        }
+    }
+    .logos{
+        z-index : 1;
+        margin : 5px;
+        a{
+            text-decoration : none;
+        }
+        &:hover{
+            filter : opacity(0.3) drop-shadow(0 0 0 purple);
+        }
+    }
+    .nav-tab{
+        margin : 5px;
+        padding : 0;
+        color : white;
+        .nav-item{
+            display : inline-block;
+            list-style : none;
+            margin-right : 20px;
+
+            .nav-link{
+                display : block;
+                padding : 3px;
+                &:hover{
+                    text-decoration : underline;
+                }
+                &.active{
+                    color : purple;
+                    text-decoration : underline;
+                }               
+            }
+        }
+    }
+}
+
+#icons-container{
+    // border-left : 2px solid purple !important;
+    display : none;
+    position : fixed;
+    top : 0;
+    left : 10px;
+    height : 400px;
+    width : 26px;
+    z-index : 1;
+    #networks{
+        display : flex;
+        flex-direction : column;
+        width : 24px;
+        height: 168px;
+        margin-left : 12px;
+        z-index : 2;
+        img{
+            width : 22px;
+            height : 22px;
+            margin : 10px 0;
+            &:hover{
+                filter: brightness(2);
+            }
+        }
+    }
+    .ligne-droite{
+        width : 100%;
+        height : 232px;
+        border-right : 2px solid purple;
+        animation : entree_icons 3s;
+        // border : 1px solid green;
+    }
+    .ligne-gauche{
+        animation : entree_icons 3s;
+        position : absolute;
+        left : 0;
+        top : 0;
+        height : 400px;
+        width : 2px;
+        border-left : 2px solid purple !important;
+    }
+}
+
+#main{
+    section.affiche{
+        display : flex;
+        padding : 60px;
+        .description{
+            margin-left : auto;
+            margin-left : auto;
+        }
+        figure{
+            margin-right : auto;
+            img{
+                width : 100%;
+                transform : scale(1.4, 1.4);
+                @media screen and (min-width:992px) and (max-width:1200px){
+                    transform : scale(2,2);
+                }
+            }
+        }
+    }
+    // srection.personnage-sliders{
+    //     figure{
+    //         margin : 0 auto;
+    //         display : flex;
+    //         @media screen and (max-width:576px){
+    //             flex-wrap : wrap;
+    //             &>*{
+    //                 margin : auto;
+    //             }
+    //         }
+            
+    //         .slides{
+    //             width : 250px;
+    //         }
+    //         img{
+    //             width : 100%;
+    //         }
+    //         legend{
+    //             width : 300px;
+    //             padding : 5px;
+
+    //         }
+    //     }
+    // }
+    section.histoire{
+        &.wakanda{
+            background-image : url("../img/wakanda/Pantherwakanda2.png");
+            background-repeat : no-repeat;
+        }
+        .illustrations{
+            .card{
+                width: 400px !important;
+                
+                line-height: 2;
+                position : relative;
+                margin : 200px auto;
+                height : 700px;
+                .card-img-top{
+                    width : 300px;
+                    position : absolute;
+                    top : -200px;
+                    left : 50px;
+                }
+                .card-body{
+                    margin-top : 200px;
+                }
+                .card-text, h4{
+                    color : black;
+                }
+                h4{
+                    text-align : center;
+                }
+            }
+            img{
+                width : 500px;
+                display : block;
+                margin : 0 auto;
+                @media screen and (max-width:576px){
+                    width : 90%;
+                }
+            }
+            
+        }
+        .colonne-gauche{
+            .video{
+                iframe{
+                    display : block;
+                    margin : 0 auto;
+                    @media screen and (max-width:1200px){
+                        width : 45vw;
+                        height: 25vw;
+                    }
+                    @media screen and (max-width:992px){
+                        width : 90vw;
+                        height : 50vw;
+                    }
+                }
+            }
+        }
+        .colonne-droite{
+            .pantherewakanda{
+                max-width: 95%;
+            }
+        }
+        
+    }
+    section.sky-view{
+        height: 1130px;
+        background-image:url("../img/wakanda/Pantherwakanda1.png");
+        .presentation-royaume{
+            width : 50%;
+            @media screen and (max-width:1200px){
+                width : 80%;
+                margin : 5px;
+            }
+            margin : 400px 0px 300px 150px;
+            h2.h2{
+                font-size : 48px;
+            }
+            p{
+                width : 60%;
+                
+            }
+        }
+    }
+    section.dora, section.enigme{
+        .row{
+            display : flex;
+            flex-wrap : wrap !important;
+        }
+        margin : 0 auto;
+        .illustration, .question{
+            .dora-img{
+                width : 100%;
+                transform : scale(1.5, 1.5);
+                z-index : -1;
+            }
+            position : relative;
+            .titre-enigme{
+                position : absolute;
+                top : -50px;
+                left : 0;
+                width : 150%;
+                @media screen and (max-width:992px){
+                    width : 100%;
+                }
+            }
+            p.transcription, p.q{
+                margin-top : 80px;
+                text-align :left !important;
+            }
+            .form-reponse{
+                display : flex;
+                flex-direction : column;
+                input{
+                    border : 2px solid white;
+                    
+                    margin : 5px;
+                    padding : 3px;
+                    border-radius : 25px;
+                    &[type='submit']{
+                        width : 150px;
+                        display : block;
+                        margin : 10px auto;
+                    }
+                    &[type='text']{
+                        background-image : url('../img/logos/arrière_plan.png');
+                        color : white;
+                    }
+                }
+            }
+            
+        }
+        .description, .savais-tu{
+            .h2{
+                width : 300px;
+                margin : 40px;
+                @media screen and (max-width:992px){
+                    width : 100%;
+                    text-align : center;
+                    margin : auto;
+                }
+            }
+            margin-right : auto;
+            .cadre{                position : relative;
+                img{
+                    width : 100%;
+                    transform : scale(1.3, 1.3);
+                    @media screen and (max-width:576px){
+                        transform : scale(1,1);
+                    }
+                }
+                p{
+                    width : 70%;
+                    text-align: justify !important;
+                    font-size : 15px !important;
+                    position : absolute;
+                    top : 25%;
+                    left : 12%;
+                    @media screen and (max-width:1200px){
+                        width : 90%;
+                        left : 6%;
+                    }
+                }
+            }
+            
+        }
+    }
+    .contact{
+        &.home-form{
+            background-image : url("../img/home/Pantherhome7.png");
+        }
+        p, legend{
+            text-align : center !important;
+        }
+        .formulaire-contact{
+            color : black;
+            border : 1px solid red;
+            width: 800px;
+            margin : 250px auto;
+            padding :40px 100px 100px 100px;
+            border-radius : 100px;
+            background-color: rgba(255,255,255, 0.3);
+            @media screen and (max-width:800px){
+                width : 90vw;
+                margin : 5px auto;
+                padding : 5px;
+            }
+            form{
+                input, textarea{
+                    display : block;
+                    margin : 10px auto 5px auto;
+                    width : 400px;
+                    border : 2px solid black;
+                    border-radius : 25px;
+                    padding : 10px;
+                    @media screen and (max-width:450px){
+                        width : 90%;
+                        padding : 5px;
+                        margin:5px auto;
+                    }
+                }
+                #message{
+                    height : 150px;
+                }
+            }
+        }
+    }
+    .validation{
+        background-color : white;
+        width : 150px;
+        &:hover{
+            border : 2px solid white !important;
+        }
+    }
+}
+#footer{
+    margin-top : 150px;
+    padding-bottom : 40px;
+    background : linear-gradient(180deg, #3D2DA6 0%, #021740 90.43%);
+    width : 100%;
+    .footer-links{
+        margin-left : 150px;
+        display : flex;
+        @media screen and (max-width:800px){
+            flex-wrap : wrap;
+        }
+        @media screen and (max-width:576px){
+            margin : 0;
+            &>*{
+                margin : auto;
+            }
+            .droits{
+                margin-top : 80px !important;
+            }
+        }
+        .marvel{
+            position : relative;
+            &:hover *{
+                transform : scale(1.1, 1.1);
+            }
+            .support{
+                width : 250px;
+            }
+            .logos{
+                position : absolute;
+                top : 128px;
+                left : 55px;
+            }
+    
+        }
+        .right{
+            width : 80%;
+            .pages-reseaux{
+                display : flex;
+                height : 250px;
+                padding : 20px;
+                .pages{
+                    width : 40%;
+                    padding : 20px;
+                    &>*{
+                        line-height : 2;
+                    }
+                }
+                .reseaux{
+                    width : 60%;
+                    padding : 20px;
+                    .network{
+                        &>*{
+                            margin-right : 20px;
+                        }
+                        a{
+                            text-decoration : none;
+                            img:hover{
+                                transform : scale(1.1, 1.1);
+                            }
+                        }
+                    }
+                }
+            }
+            .droits{
+                padding-left :0;
+                li{
+                    display : inline-block;
+                    margin-left : 10px;
+                    color : white;
+                }
+            }
+        }
+    }
+    .footer-title{
+        text-transform : uppercase;
+        margin : 10px 0;
+    }
+}
+
+
+//  Formulaire de contact
+.confirm-body{
+    // height : 100%;
+    position : fixed;
+    top : 0;
+    left : 0;
+    bottom : 0;
+    right : 0;
+    z-index : 999;
+    background-color : rgba(213, 216, 220, 0.7);
+    #confirm-container{
+        max-width : 500px;
+        height : 400px;
+        margin-left : auto;
+        margin-right : auto;
+        margin-top : 50vh;
+        transform : translateY(-200px);
+        border :1px solid red;
+        background-color : blue;
+        border-radius : 15px;
+        color : white;
+        text-align : center;
+        h2, a{
+            margin : 50px auto;
+        }
+    }
+
+}
+
+// Diapo page d'accueil
+.diapo{
+    position: relative;
+    overflow: hidden;
+    .elements{
+        // border : 2px solid yellow;
+        display: flex;
+        .element{
+            flex: 1 0;
+            position: relative;
+            // border : 2px solid red;
+            display : flex;
+            .img-container{
+                width : 295px !important;
+            }
+            .caption{
+                // position: absolute;
+                // top: 50%;
+                // left: 50%;
+                // transform: translate(-50%, -50%);
+                // text-align: center;
+                width : 295px;
+                height : 341px;
+                background-color: rgba(255, 255, 255, 0.4);
+                padding: 10px;
+                overflow : hidden;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+    #nav-gauche, #nav-droite{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    #nav-droite{
+        right: 0;
+    }
+}
+
+

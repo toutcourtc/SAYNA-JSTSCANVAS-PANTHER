@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Panther</title>
+    <!-- Fichier css principal -->
+    <link rel="stylesheet" href="../styles/main.css" type="text/css">
+
+    <!-- Intégration de normalize pour harmoniser les comportements navigateurs -->
+    <link rel="stylesheet" href="../styles/normalize.css" type="text/css">
+
+    <!-- Intégration de bootstrap 5.2.3 -> Responsive design -->
+    <link rel="stylesheet" href="../styles/bootstrap/css/bootstrap.min.css">
+
+    <!-- Fichier javascript principal -->
+    <script src="../js/main.js"></script>
+</head>
+<body id="body">
+    <header id="header">
+        <div class="logos">
+            <a href="../">
+                <img src="../img/logos/icon_SAYNA.png" alt="Logo Sayna">            
+                <img src="../img/logos/icon_x.png" alt="Logo X">
+                <img src="../img/logos/icon_MARVEL.png" alt="Logo Marvel">
+            </a>
+        </div>
+        <nav id="menu">
+            <ul class="nav-tab">
+                <li class="nav-item"><a href="../" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="wakanda.html" class="nav-link">Wakanda</a></li>
+                <li class="nav-item"><a href="enigme.html" class="nav-link active">Enigme</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <div id="icons-container">
+            <div class="ligne-gauche"></div>
+            <div class="ligne-droite"></div>
+            <div id="networks">
+                <a href="https://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther-ii.html"><img src="../img/logos/icon_facebook.png" alt="Facebook"></a>
+                <a href="https://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther-ii.html"><img src="../img/logos/icon_instagram.png" alt="Instagram"></a>
+                <a href="https://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther-ii.html"><img src="../img/logos/icon_twitter.png" alt="twitter"></a>
+                <a href="https://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther-ii.html"><img src="../img/logos/icon_tiktok.png" alt="Tiktok"></a>
+            </div>
+        </div>
+        <section class="dora container-fluid">
+            <div class="row">
+                <div class="illustration col-sm-11 col-lg-5">
+                    <img src="../img/enigme/Pantherenigme1.png" alt="Panther enigme" class="dora-img">
+                </div>
+                <div class="description col-sm-11 col-lg-5">
+                    <h2 class="h2">Releve le defi des Dora Milaje</h2>
+                    <div class="cadre">
+                        <img src="../img/enigme/Pantherenigme2.png" alt="Cardre">
+                        <img src="../img/enigme/Pantherenigme3.png" alt="Panthère" width="48" height="77">
+                        <p>
+                            Les Dora Milaje sont de farouches guerrières d’élite. Elles constituent la garde
+                            rapprochée du Roi en personne et ont de nombreuses occasions de lui sauver la
+                            vie. Leur Générale, Okoyé est également la dirigeante des forces armées et des
+                            renseignements wakandais.<br>
+                            Prouve ton talent d’espion et déchiffre cette réplique d’Okoyé écrite en Wakandais,
+                            et apprend par la même occasion la première valeur d’une Dora Milaje !
+                        </p>                    
+                    </div>
+                </div>
+            </div>            
+            
+            <!-- <img src="../img/wakanda/Pantherwakanda1.png" alt="Panther Wakanda"> -->
+        </section>
+        <section class="enigme contact container-fluid">
+            <div class="row">
+                <div class="question col-sm-11 col-lg-5">
+                    <h3 class="h3 titre-enigme"> "si je suis fidele, c'est a ce trone peu importe qui monte dessus"</h3>
+                    <p class="transcription">Voici la transcription de l'alphabet : </p>
+                    <p class="transcription">
+                        A = <span class="wakanda-fanther">a</span> ; B = <span class="wakanda-fanther">b</span> ; c = <span class="wakanda-fanther">c</span> ; 
+                        d = <span class="wakanda-fanther">d</span> ; e = <span class="wakanda-fanther">e</span> ; f = <span class="wakanda-fanther">f</span> ; 
+                        g = <span class="wakanda-fanther">g</span> ; h = <span class="wakanda-fanther">h</span> ; i = <span class="wakanda-fanther">i</span> ;
+                        j = <span class="wakanda-fanther">j</span> ; k = <span class="wakanda-fanther">k</span> ; l = <span class="wakanda-fanther">l</span> ;
+                        m = <span class="wakanda-fanther">m</span> ; n = <span class="wakanda-fanther">n</span> ; o = <span class="wakanda-fanther">o</span> ;
+                        p = <span class="wakanda-fanther">p</span> ; q = <span class="wakanda-fanther">q</span> ; r = <span class="wakanda-fanther">r</span> ;
+                        s = <span class="wakanda-fanther">s</span> ; t = <span class="wakanda-fanther">t</span> ; 
+                        u = <span class="wakanda-fanther">u</span> ; w = <span class="wakanda-fanther">w</span> ; x = <span class="wakanda-fanther">x</span> ;
+                        y = <span class="wakanda-fanther">y</span> ; z = <span class="wakanda-fanther">z</span>
+                    </p>
+                    <p class="q">Alors, as-tu la réponse ?</p>
+                    <form action="../" method="POST" class="form-reponse" onsubmit="alert('Votre réponse a été transmise')">
+                        <input type="text" name="reponse" id="reponse" placeholder="Réponse" required>
+                        <input type="submit" class="validation">
+    
+                    </form>
+                </div>
+                <div class="savais-tu col-sm-11 col-lg-5">
+                    <div class="cadre">
+                        <img src="../img/enigme/Pantherenigme2.png" alt="Cardre">
+                        <p>
+                            Le savais-tu ?<br>
+                            Plusieurs sources s’entendent pour dire que la lettre la plus utilisée en français est
+                            la lettre E. En pourcentage de fréquence, la lettre est utilisée à 14% dans une
+                            phrase. Et si tu regardais quel symbole revient le plus souvent ?
+                        </p>
+                    </div>
+                </div>
+            </div>            
+        </section>
+        
+
+
+
+    </main>
+    <footer id="footer">
+        <div class="footer-links">
+            <div class="marvel">
+                <a href="../">
+                    <img src="../img/logos/footer1.png" alt="Img footer" class="support">
+                    <img src="../img/logos/footer2.png" alt="Img footer" class="logos">
+                </a>
+            </div>
+            <div class="right">
+                <div class="pages-reseaux">
+                    <div class="pages">
+                        <div class="footer-title">Pages</div>
+                        <a href="../">A propos</a><br>
+                        <a href="wakanda.html">Wakanda</a>
+                    </div>
+                    <div class="reseaux">
+                        <div class="footer-title">Retrouvez-nous</div>
+                        <div class="network">
+                            <a href="https://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther-ii.html"><img src="../img/logos/footer3.png" alt="Facebook">
+                            <a href="https://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther-ii.html"><img src="../img/logos/footer4.png" alt="Instagram"></a>
+                            <a href="https://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther-ii.html"><img src="../img/logos/footer5.png" alt="twitter"></a>
+                            <a href="https://www.marvel-cineverse.fr/pages/mcu/encyclopedie/personnages/black-panther-ii.html"><img src="../img/logos/footer6.png" alt="Tiktok"></a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <ul class="droits">
+                    <li><a href="../">2022 tous droits réservés</a></li>
+                    <li><a href="../">Politique de confidentialité</a></li>
+                    <li><a href="../">Conditions d'utilisation</a></li>
+                </ul>                
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- Intégration du fichier js de bootstrap -->
+    <script src="styles/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

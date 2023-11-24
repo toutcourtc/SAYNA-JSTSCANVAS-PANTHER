@@ -1,0 +1,532 @@
+@charset "UTF-8";
+/*****Importation des polices de carcatères****/
+@font-face {
+  font-family: "panthera";
+  src: url("fonts/panthera/panthera.otf");
+}
+@font-face {
+  font-family: "beyno";
+  src: url("fonts/beyno/BEYNO.otf");
+}
+@font-face {
+  font-family: "wakanda-fanther";
+  src: url("fonts/wakanda-fanther/WakandaFanther-JRpp7.ttf");
+}
+@font-face {
+  font-family: "cantarell";
+  src: url("fonts/Cantarell/Cantarell-Regular.ttf");
+}
+#body {
+  background: radial-gradient(126.67% 350.28% at -21.35% 0%, #11213F 0%, #0B0B0B 39.1%, rgba(2, 23, 64, 0.837641) 94.57%, rgba(2, 23, 64, 0) 100%);
+  color: white;
+}
+#body a {
+  color: white;
+  text-decoration: none;
+}
+#body a:hover {
+  text-decoration: underline;
+}
+
+/**********Règles générales*********/
+h1#h1 {
+  font-family: "panthera";
+  margin-top: 120px;
+  font-size: 68px;
+}
+
+h2.h2 {
+  font-family: "beyno";
+  font-size: 32px;
+}
+
+h3.h3 {
+  font-family: "wakanda-fanther";
+}
+
+#body #main p {
+  font-family: "cantarell";
+  font-size: 16px;
+  text-align: justify;
+}
+
+section {
+  padding: 10px;
+}
+
+.wakanda-fanther {
+  font-family: "wakanda-fanther";
+}
+
+/* Animation des traits violets à l'entrée */
+@keyframes entree_icons {
+  from {
+    transform: translateY(-400px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+/********Le header********/
+#header {
+  font-family: "beyno";
+  margin: 20px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media screen and (max-width: 576px) {
+  #header .logos, #header #menu, #header ul, #header li {
+    margin: auto !important;
+  }
+}
+#header .logos {
+  z-index: 1;
+  margin: 5px;
+}
+#header .logos a {
+  text-decoration: none;
+}
+#header .logos:hover {
+  filter: opacity(0.3) drop-shadow(0 0 0 purple);
+}
+#header .nav-tab {
+  margin: 5px;
+  padding: 0;
+  color: white;
+}
+#header .nav-tab .nav-item {
+  display: inline-block;
+  list-style: none;
+  margin-right: 20px;
+}
+#header .nav-tab .nav-item .nav-link {
+  display: block;
+  padding: 3px;
+}
+#header .nav-tab .nav-item .nav-link:hover {
+  text-decoration: underline;
+}
+#header .nav-tab .nav-item .nav-link.active {
+  color: purple;
+  text-decoration: underline;
+}
+
+#icons-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 10px;
+  height: 400px;
+  width: 26px;
+  z-index: 1;
+}
+#icons-container #networks {
+  display: flex;
+  flex-direction: column;
+  width: 24px;
+  height: 168px;
+  margin-left: 12px;
+  z-index: 2;
+}
+#icons-container #networks img {
+  width: 22px;
+  height: 22px;
+  margin: 10px 0;
+}
+#icons-container #networks img:hover {
+  filter: brightness(2);
+}
+#icons-container .ligne-droite {
+  width: 100%;
+  height: 232px;
+  border-right: 2px solid purple;
+  animation: entree_icons 3s;
+}
+#icons-container .ligne-gauche {
+  animation: entree_icons 3s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 400px;
+  width: 2px;
+  border-left: 2px solid purple !important;
+}
+
+#main section.affiche {
+  display: flex;
+  padding: 60px;
+}
+#main section.affiche .description {
+  margin-left: auto;
+  margin-left: auto;
+}
+#main section.affiche figure {
+  margin-right: auto;
+}
+#main section.affiche figure img {
+  width: 100%;
+  transform: scale(1.4, 1.4);
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  #main section.affiche figure img {
+    transform: scale(2, 2);
+  }
+}
+#main section.histoire.wakanda {
+  background-image: url("../img/wakanda/Pantherwakanda2.png");
+  background-repeat: no-repeat;
+}
+#main section.histoire .illustrations .card {
+  width: 400px !important;
+  line-height: 2;
+  position: relative;
+  margin: 200px auto;
+  height: 700px;
+}
+#main section.histoire .illustrations .card .card-img-top {
+  width: 300px;
+  position: absolute;
+  top: -200px;
+  left: 50px;
+}
+#main section.histoire .illustrations .card .card-body {
+  margin-top: 200px;
+}
+#main section.histoire .illustrations .card .card-text, #main section.histoire .illustrations .card h4 {
+  color: black;
+}
+#main section.histoire .illustrations .card h4 {
+  text-align: center;
+}
+#main section.histoire .illustrations img {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 576px) {
+  #main section.histoire .illustrations img {
+    width: 90%;
+  }
+}
+#main section.histoire .colonne-gauche .video iframe {
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1200px) {
+  #main section.histoire .colonne-gauche .video iframe {
+    width: 45vw;
+    height: 25vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  #main section.histoire .colonne-gauche .video iframe {
+    width: 90vw;
+    height: 50vw;
+  }
+}
+#main section.histoire .colonne-droite .pantherewakanda {
+  max-width: 95%;
+}
+#main section.sky-view {
+  height: 1130px;
+  background-image: url("../img/wakanda/Pantherwakanda1.png");
+}
+#main section.sky-view .presentation-royaume {
+  width: 50%;
+  margin: 400px 0px 300px 150px;
+}
+@media screen and (max-width: 1200px) {
+  #main section.sky-view .presentation-royaume {
+    width: 80%;
+    margin: 5px;
+  }
+}
+#main section.sky-view .presentation-royaume h2.h2 {
+  font-size: 48px;
+}
+#main section.sky-view .presentation-royaume p {
+  width: 60%;
+}
+#main section.dora, #main section.enigme {
+  margin: 0 auto;
+}
+#main section.dora .row, #main section.enigme .row {
+  display: flex;
+  flex-wrap: wrap !important;
+}
+#main section.dora .illustration, #main section.dora .question, #main section.enigme .illustration, #main section.enigme .question {
+  position: relative;
+}
+#main section.dora .illustration .dora-img, #main section.dora .question .dora-img, #main section.enigme .illustration .dora-img, #main section.enigme .question .dora-img {
+  width: 100%;
+  transform: scale(1.5, 1.5);
+  z-index: -1;
+}
+#main section.dora .illustration .titre-enigme, #main section.dora .question .titre-enigme, #main section.enigme .illustration .titre-enigme, #main section.enigme .question .titre-enigme {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 150%;
+}
+@media screen and (max-width: 992px) {
+  #main section.dora .illustration .titre-enigme, #main section.dora .question .titre-enigme, #main section.enigme .illustration .titre-enigme, #main section.enigme .question .titre-enigme {
+    width: 100%;
+  }
+}
+#main section.dora .illustration p.transcription, #main section.dora .illustration p.q, #main section.dora .question p.transcription, #main section.dora .question p.q, #main section.enigme .illustration p.transcription, #main section.enigme .illustration p.q, #main section.enigme .question p.transcription, #main section.enigme .question p.q {
+  margin-top: 80px;
+  text-align: left !important;
+}
+#main section.dora .illustration .form-reponse, #main section.dora .question .form-reponse, #main section.enigme .illustration .form-reponse, #main section.enigme .question .form-reponse {
+  display: flex;
+  flex-direction: column;
+}
+#main section.dora .illustration .form-reponse input, #main section.dora .question .form-reponse input, #main section.enigme .illustration .form-reponse input, #main section.enigme .question .form-reponse input {
+  border: 2px solid white;
+  margin: 5px;
+  padding: 3px;
+  border-radius: 25px;
+}
+#main section.dora .illustration .form-reponse input[type=submit], #main section.dora .question .form-reponse input[type=submit], #main section.enigme .illustration .form-reponse input[type=submit], #main section.enigme .question .form-reponse input[type=submit] {
+  width: 150px;
+  display: block;
+  margin: 10px auto;
+}
+#main section.dora .illustration .form-reponse input[type=text], #main section.dora .question .form-reponse input[type=text], #main section.enigme .illustration .form-reponse input[type=text], #main section.enigme .question .form-reponse input[type=text] {
+  background-image: url("../img/logos/arrière_plan.png");
+  color: white;
+}
+#main section.dora .description, #main section.dora .savais-tu, #main section.enigme .description, #main section.enigme .savais-tu {
+  margin-right: auto;
+}
+#main section.dora .description .h2, #main section.dora .savais-tu .h2, #main section.enigme .description .h2, #main section.enigme .savais-tu .h2 {
+  width: 300px;
+  margin: 40px;
+}
+@media screen and (max-width: 992px) {
+  #main section.dora .description .h2, #main section.dora .savais-tu .h2, #main section.enigme .description .h2, #main section.enigme .savais-tu .h2 {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+}
+#main section.dora .description .cadre, #main section.dora .savais-tu .cadre, #main section.enigme .description .cadre, #main section.enigme .savais-tu .cadre {
+  position: relative;
+}
+#main section.dora .description .cadre img, #main section.dora .savais-tu .cadre img, #main section.enigme .description .cadre img, #main section.enigme .savais-tu .cadre img {
+  width: 100%;
+  transform: scale(1.3, 1.3);
+}
+@media screen and (max-width: 576px) {
+  #main section.dora .description .cadre img, #main section.dora .savais-tu .cadre img, #main section.enigme .description .cadre img, #main section.enigme .savais-tu .cadre img {
+    transform: scale(1, 1);
+  }
+}
+#main section.dora .description .cadre p, #main section.dora .savais-tu .cadre p, #main section.enigme .description .cadre p, #main section.enigme .savais-tu .cadre p {
+  width: 70%;
+  text-align: justify !important;
+  font-size: 15px !important;
+  position: absolute;
+  top: 25%;
+  left: 12%;
+}
+@media screen and (max-width: 1200px) {
+  #main section.dora .description .cadre p, #main section.dora .savais-tu .cadre p, #main section.enigme .description .cadre p, #main section.enigme .savais-tu .cadre p {
+    width: 90%;
+    left: 6%;
+  }
+}
+#main .contact.home-form {
+  background-image: url("../img/home/Pantherhome7.png");
+}
+#main .contact p, #main .contact legend {
+  text-align: center !important;
+}
+#main .contact .formulaire-contact {
+  color: black;
+  border: 1px solid red;
+  width: 800px;
+  margin: 250px auto;
+  padding: 40px 100px 100px 100px;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+@media screen and (max-width: 800px) {
+  #main .contact .formulaire-contact {
+    width: 90vw;
+    margin: 5px auto;
+    padding: 5px;
+  }
+}
+#main .contact .formulaire-contact form input, #main .contact .formulaire-contact form textarea {
+  display: block;
+  margin: 10px auto 5px auto;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 10px;
+}
+@media screen and (max-width: 450px) {
+  #main .contact .formulaire-contact form input, #main .contact .formulaire-contact form textarea {
+    width: 90%;
+    padding: 5px;
+    margin: 5px auto;
+  }
+}
+#main .contact .formulaire-contact form #message {
+  height: 150px;
+}
+#main .validation {
+  background-color: white;
+  width: 150px;
+}
+#main .validation:hover {
+  border: 2px solid white !important;
+}
+
+#footer {
+  margin-top: 150px;
+  padding-bottom: 40px;
+  background: linear-gradient(180deg, #3D2DA6 0%, #021740 90.43%);
+  width: 100%;
+}
+#footer .footer-links {
+  margin-left: 150px;
+  display: flex;
+}
+@media screen and (max-width: 800px) {
+  #footer .footer-links {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 576px) {
+  #footer .footer-links {
+    margin: 0;
+  }
+  #footer .footer-links > * {
+    margin: auto;
+  }
+  #footer .footer-links .droits {
+    margin-top: 80px !important;
+  }
+}
+#footer .footer-links .marvel {
+  position: relative;
+}
+#footer .footer-links .marvel:hover * {
+  transform: scale(1.1, 1.1);
+}
+#footer .footer-links .marvel .support {
+  width: 250px;
+}
+#footer .footer-links .marvel .logos {
+  position: absolute;
+  top: 128px;
+  left: 55px;
+}
+#footer .footer-links .right {
+  width: 80%;
+}
+#footer .footer-links .right .pages-reseaux {
+  display: flex;
+  height: 250px;
+  padding: 20px;
+}
+#footer .footer-links .right .pages-reseaux .pages {
+  width: 40%;
+  padding: 20px;
+}
+#footer .footer-links .right .pages-reseaux .pages > * {
+  line-height: 2;
+}
+#footer .footer-links .right .pages-reseaux .reseaux {
+  width: 60%;
+  padding: 20px;
+}
+#footer .footer-links .right .pages-reseaux .reseaux .network > * {
+  margin-right: 20px;
+}
+#footer .footer-links .right .pages-reseaux .reseaux .network a {
+  text-decoration: none;
+}
+#footer .footer-links .right .pages-reseaux .reseaux .network a img:hover {
+  transform: scale(1.1, 1.1);
+}
+#footer .footer-links .right .droits {
+  padding-left: 0;
+}
+#footer .footer-links .right .droits li {
+  display: inline-block;
+  margin-left: 10px;
+  color: white;
+}
+#footer .footer-title {
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.confirm-body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  background-color: rgba(213, 216, 220, 0.7);
+}
+.confirm-body #confirm-container {
+  max-width: 500px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50vh;
+  transform: translateY(-200px);
+  border: 1px solid red;
+  background-color: blue;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+}
+.confirm-body #confirm-container h2, .confirm-body #confirm-container a {
+  margin: 50px auto;
+}
+
+.diapo {
+  position: relative;
+  overflow: hidden;
+}
+.diapo .elements {
+  display: flex;
+}
+.diapo .elements .element {
+  flex: 1 0;
+  position: relative;
+  display: flex;
+}
+.diapo .elements .element .img-container {
+  width: 295px !important;
+}
+.diapo .elements .element .caption {
+  width: 295px;
+  height: 341px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 10px;
+  overflow: hidden;
+}
+.diapo .elements .element img {
+  width: 100%;
+}
+.diapo #nav-gauche, .diapo #nav-droite {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.diapo #nav-droite {
+  right: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
