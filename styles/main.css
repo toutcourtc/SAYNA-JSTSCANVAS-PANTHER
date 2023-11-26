@@ -35,7 +35,7 @@ h1#h1 {
   font-size: 68px;
 }
 
-h1:hover, h2:hover, h3:hover, #tchalla:hover {
+h1:hover, h2:hover, h3:hover, #tchalla img:hover {
   transform: scale(1.2, 1.2) !important;
 }
 
