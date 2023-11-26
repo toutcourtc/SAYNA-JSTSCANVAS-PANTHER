@@ -38,10 +38,16 @@ h1#h1 {
 h2.h2 {
   font-family: "beyno";
   font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.numbers {
+  font-family: helvetica;
 }
 
 h3.h3 {
   font-family: "wakanda-fanther";
+  margin: 20px 0;
 }
 
 #body #main p {
@@ -275,7 +281,7 @@ section {
   }
 }
 #main section.dora .illustration p.transcription, #main section.dora .illustration p.q, #main section.dora .question p.transcription, #main section.dora .question p.q, #main section.enigme .illustration p.transcription, #main section.enigme .illustration p.q, #main section.enigme .question p.transcription, #main section.enigme .question p.q {
-  margin-top: 80px;
+  margin-top: 100px;
   text-align: left !important;
 }
 #main section.dora .illustration .form-reponse, #main section.dora .question .form-reponse, #main section.enigme .illustration .form-reponse, #main section.enigme .question .form-reponse {
@@ -314,21 +320,33 @@ section {
 #main section.dora .description .cadre, #main section.dora .savais-tu .cadre, #main section.enigme .description .cadre, #main section.enigme .savais-tu .cadre {
   position: relative;
 }
-#main section.dora .description .cadre img, #main section.dora .savais-tu .cadre img, #main section.enigme .description .cadre img, #main section.enigme .savais-tu .cadre img {
+#main section.dora .description .cadre > img, #main section.dora .savais-tu .cadre > img, #main section.enigme .description .cadre > img, #main section.enigme .savais-tu .cadre > img {
   width: 100%;
   transform: scale(1.3, 1.3);
 }
 @media screen and (max-width: 576px) {
-  #main section.dora .description .cadre img, #main section.dora .savais-tu .cadre img, #main section.enigme .description .cadre img, #main section.enigme .savais-tu .cadre img {
+  #main section.dora .description .cadre > img, #main section.dora .savais-tu .cadre > img, #main section.enigme .description .cadre > img, #main section.enigme .savais-tu .cadre > img {
     transform: scale(1, 1);
   }
+}
+#main section.dora .description .cadre .panthere-container, #main section.dora .savais-tu .cadre .panthere-container, #main section.enigme .description .cadre .panthere-container, #main section.enigme .savais-tu .cadre .panthere-container {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translationX(-24px);
+}
+#main section.dora .description .cadre .titre_transcription, #main section.dora .savais-tu .cadre .titre_transcription, #main section.enigme .description .cadre .titre_transcription, #main section.enigme .savais-tu .cadre .titre_transcription {
+  position: absolute;
+  top: 25%;
+  left: 12%;
+  font-size: 1.2rem;
 }
 #main section.dora .description .cadre p, #main section.dora .savais-tu .cadre p, #main section.enigme .description .cadre p, #main section.enigme .savais-tu .cadre p {
   width: 70%;
   text-align: justify !important;
   font-size: 15px !important;
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 12%;
 }
 @media screen and (max-width: 1200px) {
@@ -466,7 +484,7 @@ section {
   margin: 10px 0;
 }
 
-.confirm-body {
+.confirm-body, .display-body {
   position: fixed;
   top: 0;
   left: 0;
@@ -475,7 +493,7 @@ section {
   z-index: 999;
   background-color: rgba(213, 216, 220, 0.7);
 }
-.confirm-body #confirm-container {
+.confirm-body #confirm-container, .confirm-body #result-container, .display-body #confirm-container, .display-body #result-container {
   max-width: 500px;
   height: 400px;
   margin-left: auto;
@@ -488,7 +506,7 @@ section {
   color: white;
   text-align: center;
 }
-.confirm-body #confirm-container h2, .confirm-body #confirm-container a {
+.confirm-body #confirm-container h2, .confirm-body #confirm-container a, .confirm-body #result-container h2, .confirm-body #result-container a, .display-body #confirm-container h2, .display-body #confirm-container a, .display-body #result-container h2, .display-body #result-container a {
   margin: 50px auto;
 }
 
@@ -527,6 +545,19 @@ section {
 }
 .diapo #nav-droite {
   right: 0;
+}
+
+.buttons-container a {
+  margin: 0 5px !important;
+  border: 1px solid black;
+}
+
+.msg-error {
+  color: red;
+}
+
+.msg-success {
+  color: green;
 }
 
 /*# sourceMappingURL=main.css.map */

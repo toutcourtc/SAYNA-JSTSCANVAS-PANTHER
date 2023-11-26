@@ -39,9 +39,14 @@ h1#h1{
 h2.h2{
     font-family : "beyno";
     font-size : 32px;
+    margin-bottom : 20px;
+}
+.numbers{
+    font-family : helvetica;
 }
 h3.h3{
     font-family : "wakanda-fanther";
+    margin : 20px 0;
 }
 #body #main p{
     font-family : "cantarell";
@@ -307,7 +312,7 @@ section{
                 }
             }
             p.transcription, p.q{
-                margin-top : 80px;
+                margin-top : 100px;
                 text-align :left !important;
             }
             .form-reponse{
@@ -343,20 +348,36 @@ section{
                 }
             }
             margin-right : auto;
-            .cadre{                position : relative;
-                img{
+            .cadre{                
+                position : relative;
+                // border : 1px solid green;
+                &>img{
                     width : 100%;
                     transform : scale(1.3, 1.3);
+                    // border : 1px solid blue;
                     @media screen and (max-width:576px){
                         transform : scale(1,1);
                     }
+                }
+                .panthere-container{
+                    // border: 1px solid red;
+                    position : absolute;
+                    top : 70%;
+                    left : 50%;
+                    transform : translationX(-24px)
+                }
+                .titre_transcription{
+                    position : absolute;
+                    top : 25%;
+                    left : 12%;
+                    font-size : 1.2rem;
                 }
                 p{
                     width : 70%;
                     text-align: justify !important;
                     font-size : 15px !important;
                     position : absolute;
-                    top : 25%;
+                    top : 30%;
                     left : 12%;
                     @media screen and (max-width:1200px){
                         width : 90%;
@@ -497,7 +518,7 @@ section{
 
 
 //  Formulaire de contact
-.confirm-body{
+.confirm-body, .display-body{
     // height : 100%;
     position : fixed;
     top : 0;
@@ -506,7 +527,7 @@ section{
     right : 0;
     z-index : 999;
     background-color : rgba(213, 216, 220, 0.7);
-    #confirm-container{
+    #confirm-container, #result-container{
         max-width : 500px;
         height : 400px;
         margin-left : auto;
@@ -571,3 +592,16 @@ section{
 }
 
 
+// Enigmes
+.buttons-container{
+    a{
+        margin : 0 5px !important;
+        border : 1px solid black;
+    }
+}
+.msg-error{
+    color : red;
+}
+.msg-success{
+    color : green;
+}

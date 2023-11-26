@@ -15,6 +15,7 @@
 
     <!-- Fichier javascript principal -->
     <script src="../js/main.js"></script>
+    <script src="../js/enigmes.js"></script>
 </head>
 <body id="body">
     <header id="header">
@@ -53,14 +54,21 @@
                     <h2 class="h2">Releve le defi des Dora Milaje</h2>
                     <div class="cadre">
                         <img src="../img/enigme/Pantherenigme2.png" alt="Cardre">
-                        <img src="../img/enigme/Pantherenigme3.png" alt="Panthère" width="48" height="77">
+                        <div class="panthere-container">
+                            <img src="../img/enigme/Pantherenigme3.png" alt="Panthère" width="48" height="77">
+                        </div>
+                        
                         <p>
                             Les Dora Milaje sont de farouches guerrières d’élite. Elles constituent la garde
-                            rapprochée du Roi en personne et ont de nombreuses occasions de lui sauver la
-                            vie. Leur Générale, Okoyé est également la dirigeante des forces armées et des
-                            renseignements wakandais.<br>
-                            Prouve ton talent d’espion et déchiffre cette réplique d’Okoyé écrite en Wakandais,
-                            et apprend par la même occasion la première valeur d’une Dora Milaje !
+                            rapprochée du Roi en personne et ont de nombreuses occasions de lui sauver la vie.
+                            Leur Générale, Okoyé est également la dirigeante des forces armées et des
+                            renseignements wakandais.
+
+                            La réussite de cette évaluation ne dépend pas de la chance mais bel et bien de
+                            l’entrainement que tu as suivi jusqu’ici ainsi que de ta détermination. Relève ce défi et
+                            montre-nous que tu es capable de porter les valeurs du Black Panther et du Wakanda
+                            !
+
                         </p>                    
                     </div>
                 </div>
@@ -71,21 +79,18 @@
         <section class="enigme contact container-fluid">
             <div class="row">
                 <div class="question col-sm-11 col-lg-5">
-                    <h3 class="h3 titre-enigme"> "si je suis fidele, c'est a ce trone peu importe qui monte dessus"</h3>
-                    <p class="transcription">Voici la transcription de l'alphabet : </p>
-                    <p class="transcription">
-                        A = <span class="wakanda-fanther">a</span> ; B = <span class="wakanda-fanther">b</span> ; c = <span class="wakanda-fanther">c</span> ; 
-                        d = <span class="wakanda-fanther">d</span> ; e = <span class="wakanda-fanther">e</span> ; f = <span class="wakanda-fanther">f</span> ; 
-                        g = <span class="wakanda-fanther">g</span> ; h = <span class="wakanda-fanther">h</span> ; i = <span class="wakanda-fanther">i</span> ;
-                        j = <span class="wakanda-fanther">j</span> ; k = <span class="wakanda-fanther">k</span> ; l = <span class="wakanda-fanther">l</span> ;
-                        m = <span class="wakanda-fanther">m</span> ; n = <span class="wakanda-fanther">n</span> ; o = <span class="wakanda-fanther">o</span> ;
-                        p = <span class="wakanda-fanther">p</span> ; q = <span class="wakanda-fanther">q</span> ; r = <span class="wakanda-fanther">r</span> ;
-                        s = <span class="wakanda-fanther">s</span> ; t = <span class="wakanda-fanther">t</span> ; 
-                        u = <span class="wakanda-fanther">u</span> ; w = <span class="wakanda-fanther">w</span> ; x = <span class="wakanda-fanther">x</span> ;
-                        y = <span class="wakanda-fanther">y</span> ; z = <span class="wakanda-fanther">z</span>
+                    <h2 class="h2">Enigme numero <span class="numbers">1</span></h2>
+                    <p class="pEnigme">
+                        Prouve ton talent d’espion et déchiffre cette réplique d’Okoyé écrite en Wakandais, et
+                        apprend par la même occasion la première valeur d’une Dora Milaje !
+                        <br>Le savais tu ?<br>
+                        Plusieurs sources s’entendent pour dire que la lettre la plus utilisée en français est la
+                        lettre E. En pourcentage de fréquence, la lettre est utilisée à 14% dans une phrase. Et
+                        si tu regardais quel symbole revient le plus souvent ?
                     </p>
+                    
                     <p class="q">Alors, as-tu la réponse ?</p>
-                    <form action="../" method="POST" class="form-reponse" onsubmit="alert('Votre réponse a été transmise')">
+                    <form action="../" method="POST" class="form-reponse" id="form-enigme">
                         <input type="text" name="reponse" id="reponse" placeholder="Réponse" required>
                         <input type="submit" class="validation">
     
@@ -94,11 +99,17 @@
                 <div class="savais-tu col-sm-11 col-lg-5">
                     <div class="cadre">
                         <img src="../img/enigme/Pantherenigme2.png" alt="Cardre">
-                        <p>
-                            Le savais-tu ?<br>
-                            Plusieurs sources s’entendent pour dire que la lettre la plus utilisée en français est
-                            la lettre E. En pourcentage de fréquence, la lettre est utilisée à 14% dans une
-                            phrase. Et si tu regardais quel symbole revient le plus souvent ?
+                        <h2 class="titre_transcription">Voici la transcription de l'alphabet : </h2>
+                        <p class="transcription">
+                            A = <span class="wakanda-fanther">a</span> ; B = <span class="wakanda-fanther">b</span> ; c = <span class="wakanda-fanther">c</span> ; 
+                            d = <span class="wakanda-fanther">d</span> ; e = <span class="wakanda-fanther">e</span> ; f = <span class="wakanda-fanther">f</span> ; 
+                            g = <span class="wakanda-fanther">g</span> ; h = <span class="wakanda-fanther">h</span> ; i = <span class="wakanda-fanther">i</span> ;
+                            j = <span class="wakanda-fanther">j</span> ; k = <span class="wakanda-fanther">k</span> ; l = <span class="wakanda-fanther">l</span> ;
+                            m = <span class="wakanda-fanther">m</span> ; n = <span class="wakanda-fanther">n</span> ; o = <span class="wakanda-fanther">o</span> ;
+                            p = <span class="wakanda-fanther">p</span> ; q = <span class="wakanda-fanther">q</span> ; r = <span class="wakanda-fanther">r</span> ;
+                            s = <span class="wakanda-fanther">s</span> ; t = <span class="wakanda-fanther">t</span> ; 
+                            u = <span class="wakanda-fanther">u</span> ; w = <span class="wakanda-fanther">w</span> ; x = <span class="wakanda-fanther">x</span> ;
+                            y = <span class="wakanda-fanther">y</span> ; z = <span class="wakanda-fanther">z</span>
                         </p>
                     </div>
                 </div>
